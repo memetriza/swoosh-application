@@ -41,14 +41,16 @@
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.4002300941780822" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="Edw-pr-sj3"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="GjB-QQ-5Vy"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="17"/>
                                 <state key="normal" title="GET STARTED">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
+                                <connections>
+                                    <action selector="getStartedBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Pm3-qb-lNv"/>
+                                </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GO ALL IN" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EFS-GU-EHl">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GO ALL IN" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EFS-GU-EHl">
                                 <rect key="frame" x="77" y="145" width="260" height="70"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="260" id="2dU-a4-2Zg"/>
@@ -72,6 +74,7 @@
                             <constraint firstItem="JTW-KE-Wlo" firstAttribute="top" secondItem="EFS-GU-EHl" secondAttribute="bottom" id="G87-1Z-HaL"/>
                             <constraint firstItem="LW6-Mc-UVs" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Gqp-MW-AMX"/>
                             <constraint firstItem="jY1-zl-wrn" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Lua-cO-EJ5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="LW6-Mc-UVs" secondAttribute="trailing" constant="16" id="N8K-YH-Xxm"/>
                             <constraint firstItem="dZQ-kz-5CY" firstAttribute="top" secondItem="JTW-KE-Wlo" secondAttribute="bottom" constant="15" id="SBC-dy-Xss"/>
                             <constraint firstItem="vBL-yg-FOF" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="TK0-PE-dnM"/>
                             <constraint firstItem="EFS-GU-EHl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="VKe-YQ-T4W"/>
