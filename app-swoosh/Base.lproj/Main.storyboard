@@ -149,6 +149,9 @@
                                         <state key="normal" title="Mens">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </state>
+                                        <connections>
+                                            <action selector="onMensTapped:" destination="66b-Sl-bpd" eventType="touchUpInside" id="GfI-ym-lPM"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tZo-Bc-HSN" customClass="BorderButton" customModule="app_swoosh" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="70" width="374" height="50"/>
@@ -160,6 +163,9 @@
                                         <state key="normal" title="Womens">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </state>
+                                        <connections>
+                                            <action selector="onWomensTapped:" destination="66b-Sl-bpd" eventType="touchUpInside" id="YAd-QS-UeB"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="166-Eg-3vt" customClass="BorderButton" customModule="app_swoosh" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="140" width="374" height="50"/>
@@ -171,10 +177,13 @@
                                         <state key="normal" title="Co-ed">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </state>
+                                        <connections>
+                                            <action selector="onCoedTapped:" destination="66b-Sl-bpd" eventType="touchUpInside" id="0M3-M6-RZq"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vDC-ZP-4T2" customClass="BorderButton" customModule="app_swoosh" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vDC-ZP-4T2" customClass="BorderButton" customModule="app_swoosh" customModuleProvider="target">
                                 <rect key="frame" x="20" y="666" width="374" height="50"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
@@ -197,7 +206,7 @@
                                 </constraints>
                                 <state key="normal" image="backButton"/>
                                 <connections>
-                                    <segue destination="hTo-hW-4qH" kind="unwind" unwindAction="unwindFromSkillVCWithUnwindSegue:" id="gNp-Ch-97R"/>
+                                    <segue destination="hTo-hW-4qH" kind="unwind" unwindAction="unwindFromDesiredLegueVCWithUnwindSegue:" id="ECe-cg-oa1"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -221,13 +230,17 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="coedBtn" destination="166-Eg-3vt" id="I4k-hj-wDO"/>
+                        <outlet property="mensBtn" destination="xJR-cN-FlK" id="bA2-dS-9CC"/>
+                        <outlet property="nextBtn" destination="vDC-ZP-4T2" id="Fqt-Ie-NS8"/>
+                        <outlet property="womensBtn" destination="tZo-Bc-HSN" id="HcK-u3-N8g"/>
                         <segue destination="QUa-sg-TV3" kind="show" identifier="SkillVCSegue" id="4Rd-8F-cE0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iLE-QY-ZPF" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="hTo-hW-4qH" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="819" y="131"/>
+            <point key="canvasLocation" x="864" y="132"/>
         </scene>
         <!--SkillVC-->
         <scene sceneID="wJj-sR-F2x">
@@ -300,16 +313,30 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UlL-f0-8fu">
+                                <rect key="frame" x="20" y="20" width="29" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="29" id="D8p-nS-tio"/>
+                                    <constraint firstAttribute="height" constant="24" id="p76-vv-OCH"/>
+                                </constraints>
+                                <state key="normal" image="backButton"/>
+                                <connections>
+                                    <segue destination="0vS-gd-w9P" kind="unwind" unwindAction="unwindFromSkillVCWithUnwindSegue:" id="mCp-Jj-PZU"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="PAu-Us-LYU" firstAttribute="top" secondItem="P23-gR-GT2" secondAttribute="top" id="1NG-JS-23K"/>
                             <constraint firstAttribute="trailingMargin" secondItem="4he-8P-cdv" secondAttribute="trailing" id="Dra-UL-8gz"/>
                             <constraint firstItem="aaR-fD-tjP" firstAttribute="trailing" secondItem="P23-gR-GT2" secondAttribute="trailingMargin" id="Evo-4u-zbl"/>
+                            <constraint firstItem="UlL-f0-8fu" firstAttribute="leading" secondItem="P23-gR-GT2" secondAttribute="leadingMargin" id="IKw-Fo-kID"/>
                             <constraint firstItem="inQ-PS-ea4" firstAttribute="top" secondItem="o06-0A-beT" secondAttribute="bottom" constant="20" id="IMi-kw-XFK"/>
                             <constraint firstItem="inQ-PS-ea4" firstAttribute="leading" secondItem="P23-gR-GT2" secondAttribute="leadingMargin" id="M9h-Rm-vPH"/>
+                            <constraint firstItem="UlL-f0-8fu" firstAttribute="top" secondItem="o06-0A-beT" secondAttribute="bottom" id="PF6-aA-oRC"/>
                             <constraint firstItem="aaR-fD-tjP" firstAttribute="leading" secondItem="P23-gR-GT2" secondAttribute="leadingMargin" id="PKr-Jj-Fow"/>
                             <constraint firstItem="eTo-qz-hzD" firstAttribute="top" secondItem="PAu-Us-LYU" secondAttribute="bottom" id="a7d-HX-Z4r"/>
+                            <constraint firstItem="inQ-PS-ea4" firstAttribute="leading" secondItem="UlL-f0-8fu" secondAttribute="leading" id="d8m-nl-wjY"/>
                             <constraint firstAttribute="trailingMargin" secondItem="inQ-PS-ea4" secondAttribute="trailing" id="dM7-4D-Zfk"/>
                             <constraint firstItem="eTo-qz-hzD" firstAttribute="top" secondItem="aaR-fD-tjP" secondAttribute="bottom" constant="20" id="hCm-sk-SWy"/>
                             <constraint firstItem="PAu-Us-LYU" firstAttribute="leading" secondItem="P23-gR-GT2" secondAttribute="leading" id="qtD-wE-ycw"/>
@@ -320,8 +347,9 @@
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5gn-xW-sh6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="0vS-gd-w9P" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1564" y="132"/>
+            <point key="canvasLocation" x="1563.768115942029" y="131.25"/>
         </scene>
     </scenes>
     <resources>
